@@ -1,0 +1,23 @@
+server:
+  port: 9080
+
+# 以下是Apollo配置
+app:
+  id: SampleApp
+apollo:
+  meta: http://localhost:8080/
+  bootstrap:
+    # 设置在应用启动阶段就加载 Apollo 配置
+    enabled: true
+    # 注入 application namespace
+    namespaces: application
+  eagerLoad:
+    enabled: true
+
+# 以下是log配置
+logging:
+  level:
+    com:
+      lm:
+        apollodemo:
+          controller: debug
